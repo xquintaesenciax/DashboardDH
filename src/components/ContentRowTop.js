@@ -2,6 +2,7 @@ import React from "react";
 import ContentRowCenter from "./ContentRowCenter";
 import ContentRowMovies from "./ContentRowMovies";
 import Chart from "./Chart";
+import Products from "./Products";
 import { Routes, Route } from "react-router-dom";
 
 function ContentRowTop() {
@@ -17,7 +18,8 @@ function ContentRowTop() {
         <Routes>
           <Route path="/movies" element={<ContentRowMovies />} />
           <Route path="/genres" element={<ContentRowCenter />} />
-          <Route path="/chart" element={<Chart />} />
+          <Route path="/productList" element={<Chart />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </div>
       {/*<!--End Content Row Top-->*/}

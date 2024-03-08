@@ -1,24 +1,26 @@
-import React from 'react';
+import { useState, useEffect } from "react";
 
+function ChartRow(props) {
+  const [product, setProduct] = useState({});
+  let URL = props.detail;
 
-function ChartRow(props){
-    return (
-                <tr>
-                    <td>{props.Title}</td>
-                    <td>{props.Length}</td>
-                    <td>{props.Rating}</td>
-                    <td>
-                        <ul>
-                            {props.Categories.map( (category,i) => 
-                                <li key={`category ${i}`}>{category}</li>
-                            )}
-                        </ul>
-                    </td>
-                    <td>{props.Awards}</td>
-                </tr>
-            )
-    }
-    
-        
+  useEffect(() => {
+    fetch(URL)
+      .then((response) => response.json())
+      .then((response) => {
+        setProduct(response);
+      });
+  }, [URL]); //ERROR AL TRATAR DE NO COLOCARLE UN SEGUIMIENTO
+
+  return (
+    <tr>
+      <td>{product.name}</td>
+      <td>{product.color}</td>
+      <td>${product.precio}</td>
+      <td>{product.cuotas ? product.cuotas : 1}</td>
+      <td>{product.descuento ? product.descuento + "%" : "---"}</td>
+    </tr>
+  );
+}
 
 export default ChartRow;
