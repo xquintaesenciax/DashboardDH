@@ -5,8 +5,8 @@ import SmallCard from './SmallCard';
 
 /* <!-- Movies in DB --> */
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
+let productos = {
+    title: 'Total Productos',
     color: 'primary', 
     cuantity: 21,
     icon: 'fa-clipboard-list'
@@ -14,23 +14,23 @@ let moviesInDB = {
 
 /* <!-- Total awards --> */
 
-let totalAwards = {
-    title:' Total awards', 
+let categorias = {
+    title:'Total Categorías', 
     color:'success', 
-    cuantity: '79',
+    cuantity: '6',
     icon:'fa-award'
 }
 
 /* <!-- Actors quantity --> */
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
+let usuarios = {
+    title:'Total Usuarios' ,
     color:'warning',
     cuantity:'49',
     icon:'fa-user-check'
 }
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+let cartProps = [productos, categorias, usuarios];
 
 function ContentRowMovies(){
     return (
