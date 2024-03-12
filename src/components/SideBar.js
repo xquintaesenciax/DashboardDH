@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/logo-DH.png";
+import image from "../assets/images/logo1.png";
 import { Link } from "react-router-dom";
 
 function SideBar() {
@@ -11,14 +11,11 @@ function SideBar() {
         id="accordionSidebar"
       >
         {/*<!-- Sidebar - Brand -->*/}
-        <a
-          className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="/"
-        >
-          <div className="sidebar-brand-icon">
-            <img className="w-100" src={image} alt="Digital House" />
-          </div>
-        </a>
+        <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+    <div className="sidebar-brand-icon" style={{ maxWidth: '100px', maxHeight: '100px', overflow: 'hidden' }}>
+        <img className="w-100 h-auto" style={{ transform: 'scale(0.8)', maxWidth: '80%', maxHeight: '80%' }} src={image} alt="Digital House" />
+    </div>
+</a>
 
         {/*<!-- Divider -->*/}
         <hr className="sidebar-divider my-0" />
@@ -27,7 +24,7 @@ function SideBar() {
         <li className="nav-item active">
           <Link className="nav-link" to="/">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - DH movies</span>
+            <span>Dashboard - Velvet</span>
           </Link>
         </li>
 
@@ -36,22 +33,6 @@ function SideBar() {
 
         {/*<!-- Heading -->*/}
         <div className="sidebar-heading">Actions</div>
-
-        {/*<!-- Nav Item - Pages -->*/}
-        <li className="nav-item">
-          <Link className="nav-link collapsed" to="/movies">
-            <i className="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </Link>
-        </li>
-
-        {/*<!-- Nav Item - Charts -->*/}
-        <li className="nav-item">
-          <Link className="nav-link" to="/genres">
-            <i className="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span>
-          </Link>
-        </li>
 
         {/*<!-- Nav Item - Tables -->*/}
         <li className="nav-item">

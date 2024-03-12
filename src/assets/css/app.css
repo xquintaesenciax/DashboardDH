@@ -6988,7 +6988,7 @@ button.bg-dark:hover {
   width: 75% !important;
 }
 .w-100 {
-  width: 100% !important;
+  width: auto !important;
 }
 .w-auto {
   width: auto !important;
@@ -8834,6 +8834,7 @@ button.bg-dark:hover {
 .text-uppercase {
   text-transform: uppercase !important;
 }
+
 .text-capitalize {
   text-transform: capitalize !important;
 }
@@ -9137,7 +9138,7 @@ a:focus {
 }
 .bg-gradient-secondary {
   background-color: #858796;
-  background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
+  background-image: linear-gradient(180deg, #858796 10%, --calgo2, 100%);
   background-size: cover;
 }
 .bg-gradient-success {
@@ -9349,7 +9350,7 @@ a:focus {
   width: 2.5rem;
 }
 .topbar #sidebarToggleTop:hover {
-  background-color: #eaecf4;
+  background-color: var(--cSecundario);
 }
 .topbar #sidebarToggleTop:active {
   background-color: #dddfeb;
@@ -10005,6 +10006,11 @@ form.user .btn-user {
   position: relative;
   line-height: 1;
   width: 12.5rem;
+}
+
+.card {
+  border-left: 4px solid var(--cSecundario); /* Utilizando la variable cPrimario */
+  color: var(--white); /* Utilizando la variable white */
 }
 
 @-webkit-keyframes noise-anim {
